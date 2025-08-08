@@ -110,12 +110,12 @@ class NetworkRoutingAnalyzer:
             
             # Pattern 1: Excessive outbound traffic from single device
             outbound_count = sum(1 for r in recent_records if r['flow_type'] == 'outbound')
-            if outbound_count > 7:  # More than 70% outbound
+            if outbound_count > 6:  # Lowered threshold for better detection
                 suspicious_patterns.append({
                     'type': 'excessive_outbound',
                     'flow': flow_key,
-                    'severity': 'medium',
-                    'description': f'Device {flow_key.split("->")[0]} sending excessive outbound traffic'
+                    'severity': 'high' if outbound_count > 8 else 'medium',
+                    'description': f'Device {flow_key.split("->")[0]} sending excessive outbound traffic ({outbound_count} connections)'
                 })
             
             # Pattern 2: Unusual internal communication
