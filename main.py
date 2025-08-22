@@ -2,7 +2,7 @@
 """
 EdgeGuard - Home IoT AI Threat Detector
 A lightweight tool for detecting IoT threats using local AI analysis
-Enhanced with network routing analysis capabilities
+Enhanced with network routing analysis and real-time blocking capabilities
 """
 
 import time
@@ -14,14 +14,52 @@ import threading
 import signal
 import sys
 from routing_analyzer import NetworkRoutingAnalyzer
+from device_discovery import DeviceDiscovery
+from threat_blocker import ResponseSystem
 
 class EdgeGuard:
     def __init__(self):
         self.packet_count = 0
         self.traffic_summary = {}
         self.running = True
+        
+        # Initialize all components
         self.routing_analyzer = NetworkRoutingAnalyzer()
+        self.device_discovery = DeviceDiscovery(self.routing_analyzer.local_network)
+        self.response_system = ResponseSystem()
+        
+        print(f"🛡️  EdgeGuard with Real-time Blocking initialized")
         print(f"🌐 Network Info: Gateway={self.routing_analyzer.gateway_ip}, Network={self.routing_analyzer.local_network}")
+        
+        # Start response system
+        self.response_system.start()
+        
+        # Start device discovery in background
+        discovery_thread = threading.Thread(target=self._periodic_device_discovery)
+        discovery_thread.daemon = True
+        discovery_thread.start()
+        
+    def _periodic_device_discovery(self):
+        """Run device discovery periodically"""
+        while self.running:
+            try:
+                devices = self.device_discovery.discover_devices()
+                
+                # Check for unauthorized devices and add to threat queue
+                for suspicious in self.device_discovery.unauthorized_devices:
+                    threat_data = {
+                        'ip': suspicious['ip'],
+                        'type': 'unauthorized_device',
+                        'severity': suspicious['risk_level'],
+                        'confidence': 0.7,
+                        'details': suspicious['reasons']
+                    }
+                    self.response_system.add_threat(threat_data)
+                    
+            except Exception as e:
+                print(f"Error in device discovery: {e}")
+            
+            time.sleep(300)  # Run every 5 minutes
         
     def analyze_with_llm(self, traffic_data, routing_summary):
         """Send traffic summary and routing analysis to local Ollama for analysis"""
@@ -137,9 +175,23 @@ class EdgeGuard:
             for pattern in routing_summary['suspicious_patterns']:
                 print(f"   {pattern['severity'].upper()}: {pattern['description']}")
         
-        # Send to LLM for analysis
+        # Enhanced LLM analysis with routing patterns and device context
         analysis = self.analyze_with_llm(analysis_data, routing_summary)
         print(f"🤖 AI Analysis: {analysis}")
+        
+        # Check for threats and trigger blocking if needed
+        if "suspicious" in analysis.lower() or "threat" in analysis.lower():
+            # Extract potential threat information and add to response queue
+            for pattern in routing_summary.get('suspicious_patterns', []):
+                if 'source_ip' in pattern:
+                    threat_data = {
+                        'ip': pattern['source_ip'],
+                        'type': pattern['type'],
+                        'severity': pattern['severity'],
+                        'confidence': 0.8,
+                        'ai_analysis': analysis
+                    }
+                    self.response_system.add_threat(threat_data)
         
         # Log to file
         log_entry = {
