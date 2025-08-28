@@ -101,6 +101,7 @@ class DeviceDiscovery:
         # Common device patterns
         if any(x in hostname_lower for x in ['iphone', 'ipad', 'apple']):
             return 'iOS Device'
+<<<<<<< HEAD
         elif any(x in hostname_lower for x in ['android', 'samsung', 'pixel', 'oneplus']):
             return 'Android Device'
         elif any(x in hostname_lower for x in ['laptop', 'desktop', 'pc', 'macbook', 'imac']):
@@ -116,6 +117,23 @@ class DeviceDiscovery:
         elif any(x in hostname_lower for x in ['thermostat', 'hvac', 'ecobee']):
             return 'Smart Thermostat'
         elif any(x in hostname_lower for x in ['light', 'bulb', 'switch', 'philips', 'hue']):
+=======
+        elif any(x in hostname_lower for x in ['android', 'samsung', 'pixel']):
+            return 'Android Device'
+        elif any(x in hostname_lower for x in ['laptop', 'desktop', 'pc', 'macbook']):
+            return 'Computer'
+        elif any(x in hostname_lower for x in ['router', 'gateway', 'modem']):
+            return 'Network Equipment'
+        elif any(x in hostname_lower for x in ['tv', 'roku', 'chromecast', 'firestick']):
+            return 'Smart TV/Streaming'
+        elif any(x in hostname_lower for x in ['alexa', 'echo', 'google', 'nest']):
+            return 'Smart Speaker'
+        elif any(x in hostname_lower for x in ['camera', 'doorbell', 'security']):
+            return 'Security Device'
+        elif any(x in hostname_lower for x in ['thermostat', 'hvac']):
+            return 'Smart Thermostat'
+        elif any(x in hostname_lower for x in ['light', 'bulb', 'switch']):
+>>>>>>> 9c56df7 (Improve routing analysis logging and output formatting)
             return 'Smart Lighting'
         
         # MAC address OUI lookup (simplified)
