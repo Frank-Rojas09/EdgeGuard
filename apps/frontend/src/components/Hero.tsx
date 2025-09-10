@@ -28,13 +28,21 @@ export default function Hero() {
               <span className="stat-label">Local Processing</span>
             </div>
             <div className="stat">
-              <span className="stat-number">Real-time</span>
-              <span className="stat-label">Threat Detection</span>
+              <span className="stat-number">MIT</span>
+              <span className="stat-label">Open Source</span>
             </div>
             <div className="stat">
-              <span className="stat-number">Open Source</span>
-              <span className="stat-label">MIT License</span>
+              <span className="stat-number">24/7</span>
+              <span className="stat-label">Protection</span>
             </div>
+          </div>
+        </div>
+        <div className="hero-visual">
+          <div className="security-shield">
+            <i className="fas fa-shield-alt"></i>
+            <div className="pulse-ring"></div>
+            <div className="pulse-ring delay-1"></div>
+            <div className="pulse-ring delay-2"></div>
           </div>
         </div>
       </div>

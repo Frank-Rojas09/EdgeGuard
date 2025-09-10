@@ -3,42 +3,41 @@ import '../styles/Features.css'
 export default function Features() {
   const features = [
     {
-      icon: 'fa-network-wired',
-      title: 'Device Discovery',
-      description: 'Automatically detect and catalog all IoT devices on your network'
+      icon: 'fa-user-shield',
+      title: 'Privacy First',
+      description: 'All analysis happens locally on your device. No data ever leaves your network.'
     },
     {
       icon: 'fa-brain',
-      title: 'AI Threat Detection',
-      description: 'Local AI models identify suspicious behavior and potential attacks'
+      title: 'AI-Powered Detection',
+      description: 'Uses Llama 3.2 AI model to identify sophisticated threats and attack patterns.'
     },
     {
-      icon: 'fa-shield-halved',
-      title: 'Real-time Protection',
-      description: 'Instant blocking of malicious traffic and automated threat response'
-    },
-    {
-      icon: 'fa-lock',
-      title: 'Privacy First',
-      description: 'All processing happens locally - your data never leaves your network'
-    },
-    {
-      icon: 'fa-chart-line',
-      title: 'Network Analytics',
-      description: 'Detailed insights into traffic patterns and device behavior'
+      icon: 'fa-microchip',
+      title: 'Lightweight & Fast',
+      description: 'Runs on Raspberry Pi or any Linux device with minimal resource usage.'
     },
     {
       icon: 'fa-code',
       title: 'Open Source',
-      description: 'Fully transparent, auditable code under MIT license'
+      description: 'MIT licensed for transparency, security auditing, and community contributions.'
+    },
+    {
+      icon: 'fa-clock',
+      title: 'Real-Time Monitoring',
+      description: 'Continuous network traffic analysis with instant threat notifications.'
+    },
+    {
+      icon: 'fa-cogs',
+      title: 'Easy Setup',
+      description: 'Simple installation process with automated configuration and updates.'
     }
   ]
 
   return (
     <section id="features" className="features">
       <div className="container">
-        <h2 className="section-title">Powerful Features</h2>
-        <p className="section-subtitle">Enterprise-grade security for your home network</p>
+        <h2 className="section-title">Why Choose EdgeGuard?</h2>
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
