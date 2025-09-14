@@ -1,0 +1,17 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="url(#aiGrad)" opacity="0.1"/>
+  <!-- Brain shape -->
+  <path d="M35 40 Q30 40 30 45 Q30 50 35 50 Q35 55 40 55 Q40 60 45 60 Q50 60 50 55 Q55 55 55 60 Q60 60 60 55 Q65 55 65 50 Q70 50 70 45 Q70 40 65 40 Q65 35 60 35 Q55 35 55 30 Q50 30 50 35 Q45 35 45 30 Q40 30 40 35 Q35 35 35 40 Z" fill="url(#aiGrad)"/>
+  <!-- Neural connections -->
+  <circle cx="42" cy="45" r="2" fill="white"/>
+  <circle cx="50" cy="42" r="2" fill="white"/>
+  <circle cx="58" cy="45" r="2" fill="white"/>
+  <circle cx="45" cy="52" r="2" fill="white"/>
+  <circle cx="55" cy="52" r="2" fill="white"/>
+</svg>
