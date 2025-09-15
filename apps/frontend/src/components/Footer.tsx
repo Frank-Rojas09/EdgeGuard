@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Resources</h4>
             <ul>
-              <li><a href="#docs">Documentation</a></li>
+              <li><a href="guide/docs/intro">Documentation</a></li>
               <li><a href="https://github.com/SyedUmerHasan/EdgeGuard">GitHub</a></li>
               <li><a href="#download">Download</a></li>
             </ul>
@@ -24,6 +24,7 @@ export default function Footer() {
             <h4>Community</h4>
             <ul>
               <li><a href="https://github.com/SyedUmerHasan/EdgeGuard/issues">Issues</a></li>
+              <li><a href="https://github.com/SyedUmerHasan/EdgeGuard/pulls">Pull Requests</a></li>
               <li><a href="https://github.com/SyedUmerHasan/EdgeGuard/discussions">Discussions</a></li>
               <li><a href="https://github.com/SyedUmerHasan/EdgeGuard/blob/main/CONTRIBUTING.md">Contributing</a></li>
             </ul>
